@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap");
+
+    /* navbar css */
+    .navbar {
+        margin: auto;
+        width: auto;
+        justify-content: center;
+    }
+
+    .logo_1 {
+        margin-left: 20px;
+        justify-content: center;
+    }
+
+    .seller {
+        margin-left: 20px;
+        margin-right: 30px;
+        padding-right: 30px;
+    }
+
+    .search {
+        margin-right: 30px;
+        margin-left: 20px;
+    }
+
+    .acc {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    .bag {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    /* profile bar css */
+    .profilebar {
+        margin-top: 90px;
+    }
+
+    .button1 {
+        background-color: #A21608;
+        color: white;
+    }
+
+    .textul {
+        font-size: x-large;
+    }
+
+    .btn-outline-danger:hover {
+        background-color: #A21608;
+    }
+
+    /* card items */
+    .price {
+        color: green;
+    }
+
+    /* footer */
+    .followus img {
+        width: 30px;
+    }
+
+    .copy {
+        background-color: #A21608;
+    }
+
+    .list-unstyled li:hover {
+        color: #f00;
+        ;
+    }
+
+    a,
+    p,
+    h5,
+    h3,
+    h2,
+    button {
+        font-family: 'League Spartan', sans-serif;
+    }
+</style>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top" style="width: auto">
+        <div class="container-fluid justify-content-center">
+            <div class="logo_1">
+                <a href="index.html">
+                    <img src="logo.png" alt="" width="200px">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item px-4 ms-2">
+                        <a class="nav-link fw-medium" href="thrifting.html">Thrifting</a>
+                    </li>
+
+                    <li class="nav-item seller">
+                        <a class="nav-link fw-medium" href="seller.html">Seller</a>
+                    </li>
+
+                    <form class="d-flex search" role="search" style="width: 380px;">
+                        <div class="input-group">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-sm border-start border-dark-subtle  buttonsearch" type="submit"
+                                    style="width: 45px;">
+                                    <img src="icon/search.png" alt="Search Icon" style="width: 28px">
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <li class="nav-item px-4 ms-2">
+                        <a class="nav-link fw-medium" href="account.html">Account</a>
+                    </li>
+
+                    <li class="nav-item px-4 ms-2">
+                        <a class="nav-link fw-medium" href="mybag.html">Bag</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <!-- profile bar and content -->
+    <div class="justify-content-center content">
+        <div class="profilebar">
+            <div class="cardprof card w-85 mx-4 mb-3">
+                <div class="card-body top">
+                    <img src="seller/seller1.jpg" style="float: left; margin-right: 10px; width: 200px;">
+                    <ul class="justify-content-end textul" style="list-style-type: none;">
+                        <li>
+                            <h2 class="card-title">Theresa Webb</h2>
+                        </li>
+                        <li>
+                            <p class="card-text">Information System'22</p>
+                        </li>
+                    </ul>
+                    <div class="py-2">
+                        <a href="#" class="btn btn-outline-danger button">Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" href="mystore.html">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Rating</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="mystatus.html">Status</a>
+            </li>
+        </ul>
+        <div class="button">
+            <div class="offcanvas offcanvas-start w-10" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filter Items By:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!-- <div>
+                Filter By :
+              </div> -->
+                    <div class="dropdown mt-2">
+                        <button class="btn btn-outline-light button1 dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">
+                            Category
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Clothes</a></li>
+                            <li><a class="dropdown-item" href="#">Shoes</a></li>
+                            <li><a class="dropdown-item" href="#">Accessories</a></li>
+                        </ul>
+                        <div class="dropdown mt-2">
+                            <button class="btn btn-outline-light button1 dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown">
+                                Condition
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Excellent</a></li>
+                                <li><a class="dropdown-item" href="#">Very Good</a></li>
+                                <li><a class="dropdown-item" href="#">Good</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end profile bar -->
+    <!-- Rating  -->
+    <div class="reviews justify-content-center pt-3">
+        <div class="col">
+            <div class="card mb-3 card rounded-0 border-0" style="max-width: 100%; margin-left: 25px; height: 160px; border-bottom: 0;">
+                <div class="row border-bottom">
+                    <div class="col-md-2 mt-3 ms-3">
+                        <img src="seller/seller17.jpg" style="width: 130px;" class="rounded-circle shadow-5-strong"
+                            alt="...">
+                    </div>
+                    <div class="col-md-8 justify-content-center">
+                        <div class="card-body mt-1">
+                            <h5 class="card-title">Lily Patel</h5>
+                            <h6 class="card-text" style="color: blue;">5/5</h6>
+                            <p class="card-text">Pengirman cepat, barang berfungsi dengan baik. Terima kasih!</p>
+                            <p class="card-text"><small class="text-body-secondary">2022-03-30 07:09 | AirPods Max
+                                </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mb-3 card rounded-0 border-0" style="max-width: 100%; margin-left: 25px; height: 160px; border-bottom: 0;">
+                <div class="row border-bottom">
+                    <div class="col-md-2 mt-3  ms-3">
+                        <img src="seller/seller19.jpg" style="width: 130px;" class="rounded-circle shadow-5-strong"
+                            alt="...">
+                    </div>
+                    <div class="col-md-8 justify-content-center">
+                        <div class="card-body mt-1">
+                            <h5 class="card-title">Mia Carter</h5>
+                            <h6 class="card-text" style="color: blue;">5/5</h6>
+                            <p class="card-text">Pengirman cepat, barang berfungsi dengan baik. Terima kasih!</p>
+                            <p class="card-text"><small class="text-body-secondary">2022-03-26 09:09 | Macbook Pro
+                                </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mb-3 card rounded-0 border-0" style="max-width: 100%; margin-left: 25px; height: 160px; border-bottom: 0;">
+                <div class="row border-bottom">
+                    <div class="col-md-2 mt-3  ms-3">
+                        <img src="seller/seller12.jpg" style="width: 130px;" class="rounded-circle shadow-5-strong"
+                            alt="...">
+                    </div>
+                    <div class="col-md-8 justify-content-center">
+                        <div class="card-body mt-1">
+                            <h5 class="card-title">Kim Seok Jin</h5>
+                            <h6 class="card-text" style="color: blue;">5/5</h6>
+                            <p class="card-text">Pengirman cepat, barang berfungsi dengan baik. Terima kasih!</p>
+                            <p class="card-text"><small class="text-body-secondary">2022-03-30 07:09 | AirPods Max
+                                </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mb-3 card rounded-0 border-0" style="max-width: 100%; margin-left: 25px; height: 160px; border-bottom: 0;">
+                <div class="row border-bottom">
+                    <div class="col-md-2 mt-3  ms-3">
+                        <img src="seller/seller19.jpg" style="width: 130px;" class="rounded-circle shadow-5-strong"
+                            alt="...">
+                    </div>
+                    <div class="col-md-8 justify-content-center">
+                        <div class="card-body mt-1">
+                            <h5 class="card-title">Ava Reynolds</h5>
+                            <h6 class="card-text" style="color: blue;">5/5</h6>
+                            <p class="card-text">Pengirman cepat, barang berfungsi dengan baik. Terima kasih!</p>
+                            <p class="card-text"><small class="text-body-secondary">2022-03-30 07:09 | AirPods Max
+                                </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card mb-3 card rounded-0 border-0" style="max-width: 100%; margin-left: 25px; height: 160px; border-bottom: 0;">
+                <div class="row border-bottom">
+                    <div class="col-md-2 mt-3  ms-3">
+                        <img src="seller/seller10.jpg" style="width: 130px;" class="rounded-circle shadow-5-strong"
+                            alt="...">
+                    </div>
+                    <div class="col-md-8 justify-content-center">
+                        <div class="card-body mt-1">
+                            <h5 class="card-title">Innosuke</h5>
+                            <h6 class="card-text" style="color: blue;">5/5</h6>
+                            <p class="card-text">Pengirman cepat, barang berfungsi dengan baik. Terima kasih!</p>
+                            <p class="card-text"><small class="text-body-secondary">2022-03-30 07:09 | AirPods Max
+                                </small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+        <div class=" text-white">
+            <div class="container py-2">
+                <div class="row">
+                    <div class="col">
+                        <h5>TelU Finds</h5>
+                        <ul class="list-unstyled">
+                            <li><i>About TelU Fnds</i></li>
+                            <li><i>Privacy Policy</i></li>
+                            <li><i>Help Desk</i></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5>Popular Category</h5>
+                        <ul class="list-unstyled">
+                            <li><i>Accessories</i></li>
+                            <li><i>Furniture</i></li>
+                            <li><i>Clothes</i></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5>Sell With US</h5>
+                        <ul class="list-unstyled">
+                            <li><i>Seller Guideline</i> </li>
+                            <li><i>Seller List</i></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5>Follow Us</h5>
+                        <div class="followus">
+                            <a href="instagram.com">
+                                <img src="icon/instagram.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="icon/facebook.png" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="icon/whatsapp (1).png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="copy text-center text-white py-3">
+        &copy;2023 TelUFinds. All rights reserved.
+    </div>
+    <!-- end footer -->
+</body>
+
+</html>
